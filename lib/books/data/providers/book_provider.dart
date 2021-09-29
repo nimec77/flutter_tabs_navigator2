@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter_imdb/books/domain/entities/book.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
