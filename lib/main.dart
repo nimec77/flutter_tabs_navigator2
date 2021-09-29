@@ -4,12 +4,9 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_imdb/app/presentation/app_bloc_observer.dart';
-import 'package:flutter_imdb/books/data/providers/book_provider.dart';
-import 'package:flutter_imdb/books/data/repositories/book_repository_imp.dart';
-import 'package:flutter_imdb/books/domain/ports/repositories/book_repository.dart';
-import 'package:flutter_imdb/books/presentation/blocs/book_route_bloc.dart';
-import 'package:flutter_imdb/books/presentation/router/book_route_bloc_information_parser.dart';
-import 'package:flutter_imdb/books/presentation/router/book_router_bloc_delegate.dart';
+import 'package:flutter_imdb/app/presentation/blocs/app_route_bloc.dart';
+import 'package:flutter_imdb/app/presentation/router/app_route_information_parser.dart';
+import 'package:flutter_imdb/app/presentation/router/app_router_delegate.dart';
 
 void main() {
   Bloc.observer = AppBlocObserver();
@@ -17,37 +14,35 @@ void main() {
     log(details.exceptionAsString(), stackTrace: details.stack);
   };
   runZonedGuarded(
-    () => runApp(ImdbApp(bookRepository: BookRepositoryImp(BookProvider()))),
+    () => runApp(const ImdbApp()),
     (error, stackTrace) => log(error.toString(), stackTrace: stackTrace),
   );
 }
 
 class ImdbApp extends StatefulWidget {
-  const ImdbApp({Key? key, required this.bookRepository}) : super(key: key);
-
-  final BookRepository bookRepository;
+  const ImdbApp({Key? key}) : super(key: key);
 
   @override
   State<ImdbApp> createState() => _ImdbAppState();
 }
 
 class _ImdbAppState extends State<ImdbApp> {
-  late final BookRouteBloc _bookRouteBloc;
-  late final BookRouterBlocDelegate _routeBlocDelegate;
-  late final BookRouteBlocInformationParser _routeBlocInformationParser;
+  late final AppRouteBloc _appRouteBloc;
+  late final AppRouterDelegate _appRouterDelegate;
+  late final AppRouteInformationParser _appRouteInformationParser;
 
   @override
   void initState() {
-    _bookRouteBloc = BookRouteBloc(widget.bookRepository);
-    _routeBlocDelegate = BookRouterBlocDelegate(_bookRouteBloc);
-    _routeBlocInformationParser = BookRouteBlocInformationParser(_bookRouteBloc);
-    _bookRouteBloc.add(const BookRouteEvent.home());
+    _appRouteBloc = AppRouteBloc();
+    _appRouterDelegate = AppRouterDelegate(_appRouteBloc);
+    _appRouteInformationParser = AppRouteInformationParser(_appRouteBloc);
+    _appRouteBloc.add(const AppRouteEvent.toMoviesList());
     super.initState();
   }
 
   @override
   void dispose() {
-    _bookRouteBloc.close();
+    _appRouteBloc.close();
     super.dispose();
   }
 
@@ -58,8 +53,8 @@ class _ImdbAppState extends State<ImdbApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routerDelegate: _routeBlocDelegate,
-      routeInformationParser: _routeBlocInformationParser,
+      routerDelegate: _appRouterDelegate,
+      routeInformationParser: _appRouteInformationParser,
     );
   }
 }
