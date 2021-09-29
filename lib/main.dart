@@ -8,8 +8,8 @@ import 'package:flutter_imdb/books/data/providers/book_provider.dart';
 import 'package:flutter_imdb/books/data/repositories/book_repository_imp.dart';
 import 'package:flutter_imdb/books/domain/ports/repositories/book_repository.dart';
 import 'package:flutter_imdb/books/presentation/blocs/book_route_bloc.dart';
-import 'package:flutter_imdb/books/presentation/router/book_route_bloc_delegate.dart';
 import 'package:flutter_imdb/books/presentation/router/book_route_bloc_information_parser.dart';
+import 'package:flutter_imdb/books/presentation/router/book_router_bloc_delegate.dart';
 
 void main() {
   Bloc.observer = AppBlocObserver();
@@ -33,13 +33,13 @@ class ImdbApp extends StatefulWidget {
 
 class _ImdbAppState extends State<ImdbApp> {
   late final BookRouteBloc _bookRouteBloc;
-  late final BookRouteBlocDelegate _routeBlocDelegate;
+  late final BookRouterBlocDelegate _routeBlocDelegate;
   late final BookRouteBlocInformationParser _routeBlocInformationParser;
 
   @override
   void initState() {
     _bookRouteBloc = BookRouteBloc(widget.bookRepository);
-    _routeBlocDelegate = BookRouteBlocDelegate(_bookRouteBloc);
+    _routeBlocDelegate = BookRouterBlocDelegate(_bookRouteBloc);
     _routeBlocInformationParser = BookRouteBlocInformationParser(_bookRouteBloc);
     _bookRouteBloc.add(const BookRouteEvent.home());
     super.initState();

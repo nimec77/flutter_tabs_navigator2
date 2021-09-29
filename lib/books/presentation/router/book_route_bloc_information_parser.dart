@@ -1,4 +1,3 @@
-
 import 'package:flutter/widgets.dart';
 import 'package:flutter_imdb/books/presentation/blocs/book_route_bloc.dart';
 
@@ -30,5 +29,14 @@ class BookRouteBlocInformationParser extends RouteInformationParser<BookRouteSta
     bookRouteBloc.add(const BookRouteEvent.unknown());
 
     return bookRouteBloc.stream.first;
+  }
+
+  @override
+  RouteInformation restoreRouteInformation(BookRouteState configuration) {
+    return configuration.when(
+      home: (_) => const RouteInformation(location: '/'),
+      details: (book) => RouteInformation(location: '/book/${book.isbn}'),
+      unknown: () => const RouteInformation(location: '/404'),
+    );
   }
 }

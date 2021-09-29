@@ -7,9 +7,9 @@ import 'package:flutter_imdb/books/presentation/pages/book_details_page.dart';
 import 'package:flutter_imdb/books/presentation/screens/books_list_screen.dart';
 import 'package:flutter_imdb/books/presentation/screens/unknown_screen.dart';
 
-class BookRouteBlocDelegate extends RouterDelegate<BookRouteState>
+class BookRouterBlocDelegate extends RouterDelegate<BookRouteState>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<BookRouteState> {
-  BookRouteBlocDelegate(this.bookRouteBloc) : navigatorKey = GlobalKey<NavigatorState>() {
+  BookRouterBlocDelegate(this.bookRouteBloc) : navigatorKey = GlobalKey<NavigatorState>() {
     bookRouteBloc.stream.listen((state) {
       _state = state;
       notifyListeners();
