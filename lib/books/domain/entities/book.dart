@@ -4,6 +4,9 @@ class Book {
   final String isbn;
   final String title;
   final String author;
+
+  @override
+  String toString() => 'Book: {isbn: $isbn}';
 }
 
 class NullBook implements Book {

@@ -1,58 +1,60 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_imdb/books/domain/entities/book.dart';
-import 'package:flutter_imdb/books/domain/ports/repositories/book_repository.dart';
+import 'package:flutter_imdb/books/presentation/blocs/book_route_bloc.dart';
 import 'package:flutter_imdb/books/presentation/pages/book_details_page.dart';
-import 'package:flutter_imdb/books/presentation/router/book_route_state.dart';
 import 'package:flutter_imdb/books/presentation/screens/books_list_screen.dart';
 import 'package:flutter_imdb/books/presentation/screens/unknown_screen.dart';
 
 class BookRouteBlocDelegate extends RouterDelegate<BookRouteState>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<BookRouteState> {
-  BookRouteBlocDelegate(this.bookRepository) : navigatorKey = GlobalKey<NavigatorState>();
+  BookRouteBlocDelegate(this.bookRouteBloc) : navigatorKey = GlobalKey<NavigatorState>() {
+    bookRouteBloc.stream.listen((state) {
+      _state = state;
+      notifyListeners();
+    });
+  }
 
-  final BookRepository bookRepository;
+  final BookRouteBloc bookRouteBloc;
 
   @override
   final GlobalKey<NavigatorState> navigatorKey;
 
-  var _state = const BookRouteState.home();
-  Book _selectedBook = NullBook();
+  var _state = const BookRouteState.home([]);
 
   @override
   BookRouteState get currentConfiguration => _state;
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<List<Book>>(
-      future: bookRepository.getAllBooks(),
-      builder: (context, snapshot) {
+    return BlocBuilder<BookRouteBloc, BookRouteState>(
+      bloc: bookRouteBloc,
+      builder: (context, state) {
+        final books = state.maybeWhen(
+          home: (books) => books,
+          orElse: () => <Book>[],
+        );
         return Navigator(
           key: navigatorKey,
           pages: [
             MaterialPage<void>(
               key: const ValueKey('BookListPage'),
               child: BooksListScreen(
-                books: snapshot.connectionState == ConnectionState.done ? snapshot.data ?? [] : [],
+                books: books,
                 onTapped: _handleBookTapped,
               ),
             ),
-            if (_state is BookRouteStateUnknown)
-              const MaterialPage<void>(
-                key: ValueKey('UnknownPage'),
-                child: UnknownScreen(),
-              )
-            else if (_state is BookRouteStateDetails)
-              BookDetailsPage(book: _selectedBook)
+            if (state is BookRouteStateUnknown)
+              const MaterialPage<void>(key: ValueKey('UnknownPage'), child: UnknownScreen())
+            else if (state is BookRouteStateDetails)
+              BookDetailsPage(book: state.book)
           ],
           onPopPage: (route, dynamic result) {
             if (!route.didPop(result)) {
               return false;
             }
-
-            _state = const BookRouteState.home();
-            notifyListeners();
-
+            bookRouteBloc.add(const BookRouteEvent.home());
             return true;
           },
         );
@@ -61,19 +63,11 @@ class BookRouteBlocDelegate extends RouterDelegate<BookRouteState>
   }
 
   void _handleBookTapped(Book book) {
-    _selectedBook = book;
-    _state = BookRouteState.details(book.isbn);
-    notifyListeners();
+    bookRouteBloc.add(BookRouteEvent.selected(book));
   }
 
   @override
   Future<void> setNewRoutePath(BookRouteState configuration) async {
-    if (configuration is BookRouteStateDetails) {
-      _selectedBook = await bookRepository.getBookByIsbn(configuration.isbn);
-      if (_selectedBook is NullBook) {
-        _state = const BookRouteState.unknown();
-      }
-    }
     _state = configuration;
   }
 }
