@@ -4,10 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_imdb/app/presentation/blocs/app_route_bloc.dart';
-import 'package:flutter_imdb/app/presentation/screens/unknown_screen.dart';
-import 'package:flutter_imdb/movies/presentation/screens/movies_grid_screen.dart';
-import 'package:flutter_imdb/movies/presentation/screens/movies_list_screen.dart';
-import 'package:flutter_imdb/movies/presentation/screens/movies_search_screen.dart';
+import 'package:flutter_imdb/app/presentation/screens/app_screen.dart';
 
 class AppRouterDelegate extends RouterDelegate<AppRouteState>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<AppRouteState> {
@@ -41,32 +38,12 @@ class AppRouterDelegate extends RouterDelegate<AppRouteState>
       builder: (context, state) {
         return Navigator(
           key: navigatorKey,
-          pages: state.map(
-            moviesList: (_) => [
-              const MaterialPage<void>(
-                key: ValueKey('MoviesListScreen'),
-                child: MoviesListScreen(),
-              ),
-            ],
-            moviesGrid: (_) => [
-              const MaterialPage<void>(
-                key: ValueKey('MoviesGridScreen'),
-                child: MoviesGridScreen(),
-              ),
-            ],
-            moviesSearch: (_) => [
-              const MaterialPage<void>(
-                key: ValueKey('MoviesSearchScreen'),
-                child: MoviesSearchScreen(),
-              ),
-            ],
-            unknown:  (_) => [
-              const MaterialPage<void>(
-                key: ValueKey('UnknownScreen'),
-                child: UnknownScreen(),
-              ),
-            ],
-          ),
+          pages: const [
+            MaterialPage<void>(
+              key: ValueKey('AppScreen'),
+              child: AppScreen(),
+            ),
+          ],
           onPopPage: (route, dynamic result) {
             if (!route.didPop(result)) {
               return false;
