@@ -1,4 +1,4 @@
-# flutter_imdb
+# flutter_tabs_navigator2
 
 A new Flutter project.
 
