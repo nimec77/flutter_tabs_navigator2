@@ -3,11 +3,11 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_imdb/app/presentation/blocs/tabs_route/tabs_route_bloc.dart';
-import 'package:flutter_imdb/app/presentation/widgets/app_bottom_bar.dart';
-import 'package:flutter_imdb/movies/presentation/screens/movies_grid_screen.dart';
-import 'package:flutter_imdb/movies/presentation/screens/movies_list_screen.dart';
-import 'package:flutter_imdb/movies/presentation/screens/movies_search_screen.dart';
+import 'package:flutter_tabs_navigator2/app/presentation/blocs/tabs_route/tabs_route_bloc.dart';
+import 'package:flutter_tabs_navigator2/app/presentation/widgets/app_bottom_bar.dart';
+import 'package:flutter_tabs_navigator2/movies/presentation/screens/movies_grid_screen.dart';
+import 'package:flutter_tabs_navigator2/movies/presentation/screens/movies_list_screen.dart';
+import 'package:flutter_tabs_navigator2/movies/presentation/screens/movies_search_screen.dart';
 
 class TabsRouterDelegate extends RouterDelegate<TabsRouteState>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<TabsRouteState> {

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_imdb/books/domain/entities/book.dart';
-import 'package:flutter_imdb/books/domain/ports/repositories/book_repository.dart';
-import 'package:flutter_imdb/books/presentation/pages/book_details_page.dart';
-import 'package:flutter_imdb/books/presentation/router/book_route_path.dart';
-import 'package:flutter_imdb/books/presentation/screens/books_list_screen.dart';
-import 'package:flutter_imdb/books/presentation/screens/unknown_screen.dart';
+import 'package:flutter_tabs_navigator2/books/domain/entities/book.dart';
+import 'package:flutter_tabs_navigator2/books/domain/ports/repositories/book_repository.dart';
+import 'package:flutter_tabs_navigator2/books/presentation/pages/book_details_page.dart';
+import 'package:flutter_tabs_navigator2/books/presentation/router/book_route_path.dart';
+import 'package:flutter_tabs_navigator2/books/presentation/screens/books_list_screen.dart';
+import 'package:flutter_tabs_navigator2/books/presentation/screens/unknown_screen.dart';
 
 class BookRouterDelegate extends RouterDelegate<BookRoutePath>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<BookRoutePath> {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_imdb/books/domain/entities/book.dart';
-import 'package:flutter_imdb/books/presentation/screens/book_details_screen.dart';
+import 'package:flutter_tabs_navigator2/books/domain/entities/book.dart';
+import 'package:flutter_tabs_navigator2/books/presentation/screens/book_details_screen.dart';
 
 class BookDetailsPage extends Page<void> {
   BookDetailsPage({required this.book}) : super(key: ValueKey(book));

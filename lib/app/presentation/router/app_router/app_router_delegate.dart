@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_imdb/app/presentation/blocs/app_route/app_route_bloc.dart';
-import 'package:flutter_imdb/app/presentation/screens/app_screen.dart';
-import 'package:flutter_imdb/app/presentation/screens/unknown_screen.dart';
+import 'package:flutter_tabs_navigator2/app/presentation/blocs/app_route/app_route_bloc.dart';
+import 'package:flutter_tabs_navigator2/app/presentation/screens/app_screen.dart';
+import 'package:flutter_tabs_navigator2/app/presentation/screens/unknown_screen.dart';
 
 class AppRouterDelegate extends RouterDelegate<AppRouteState>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<AppRouteState> {

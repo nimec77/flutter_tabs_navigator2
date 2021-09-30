@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_imdb/books/presentation/router/book_route_path.dart';
+import 'package:flutter_tabs_navigator2/books/presentation/router/book_route_path.dart';
 
 class BookRouteInformationParser extends RouteInformationParser<BookRoutePath> {
   @override

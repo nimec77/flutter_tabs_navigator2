@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_imdb/books/domain/entities/book.dart';
-import 'package:flutter_imdb/books/presentation/blocs/book_route_bloc.dart';
-import 'package:flutter_imdb/books/presentation/pages/book_details_page.dart';
-import 'package:flutter_imdb/books/presentation/screens/books_list_screen.dart';
-import 'package:flutter_imdb/books/presentation/screens/unknown_screen.dart';
+import 'package:flutter_tabs_navigator2/books/domain/entities/book.dart';
+import 'package:flutter_tabs_navigator2/books/presentation/blocs/book_route_bloc.dart';
+import 'package:flutter_tabs_navigator2/books/presentation/pages/book_details_page.dart';
+import 'package:flutter_tabs_navigator2/books/presentation/screens/books_list_screen.dart';
+import 'package:flutter_tabs_navigator2/books/presentation/screens/unknown_screen.dart';
 
 class BookRouterBlocDelegate extends RouterDelegate<BookRouteState>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<BookRouteState> {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_imdb/app/presentation/blocs/tabs_route/tabs_route_bloc.dart';
-import 'package:flutter_imdb/app/presentation/router/tabs_roter/tabs_router_delegate.dart';
+import 'package:flutter_tabs_navigator2/app/presentation/blocs/tabs_route/tabs_route_bloc.dart';
+import 'package:flutter_tabs_navigator2/app/presentation/router/tabs_roter/tabs_router_delegate.dart';
 
 class AppScreen extends StatefulWidget {
   const AppScreen({Key? key}) : super(key: key);

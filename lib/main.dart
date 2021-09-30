@@ -3,10 +3,10 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_imdb/app/presentation/app_bloc_observer.dart';
-import 'package:flutter_imdb/app/presentation/blocs/app_route/app_route_bloc.dart';
-import 'package:flutter_imdb/app/presentation/router/app_router/app_route_information_parser.dart';
-import 'package:flutter_imdb/app/presentation/router/app_router/app_router_delegate.dart';
+import 'package:flutter_tabs_navigator2/app/presentation/app_bloc_observer.dart';
+import 'package:flutter_tabs_navigator2/app/presentation/blocs/app_route/app_route_bloc.dart';
+import 'package:flutter_tabs_navigator2/app/presentation/router/app_router/app_route_information_parser.dart';
+import 'package:flutter_tabs_navigator2/app/presentation/router/app_router/app_router_delegate.dart';
 
 void main() {
   Bloc.observer = AppBlocObserver();

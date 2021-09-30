@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_imdb/app/presentation/blocs/app_route/app_route_bloc.dart';
-import 'package:flutter_imdb/app/presentation/router/constants.dart';
+import 'package:flutter_tabs_navigator2/app/presentation/blocs/app_route/app_route_bloc.dart';
+import 'package:flutter_tabs_navigator2/app/presentation/router/constants.dart';
 
 class AppRouteInformationParser extends RouteInformationParser<AppRouteState> {
   AppRouteInformationParser(this.appRouteBloc);

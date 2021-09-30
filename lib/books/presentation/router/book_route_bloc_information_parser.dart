@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_imdb/books/presentation/blocs/book_route_bloc.dart';
+import 'package:flutter_tabs_navigator2/books/presentation/blocs/book_route_bloc.dart';
 
 class BookRouteBlocInformationParser extends RouteInformationParser<BookRouteState> {
   BookRouteBlocInformationParser(this.bookRouteBloc);

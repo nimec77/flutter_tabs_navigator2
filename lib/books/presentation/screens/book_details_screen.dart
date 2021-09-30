@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_imdb/books/domain/entities/book.dart';
+import 'package:flutter_tabs_navigator2/books/domain/entities/book.dart';
 
 class BookDetailsScreen extends StatelessWidget {
   const BookDetailsScreen({Key? key, required this.book}) : super(key: key);

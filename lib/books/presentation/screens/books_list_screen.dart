@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_imdb/books/domain/entities/book.dart';
+import 'package:flutter_tabs_navigator2/books/domain/entities/book.dart';
 
 class BooksListScreen extends StatelessWidget {
   const BooksListScreen({Key? key, required this.books, required this.onTapped}) : super(key: key);

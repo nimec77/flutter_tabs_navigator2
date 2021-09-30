@@ -1,4 +1,4 @@
-import 'package:flutter_imdb/movies/domain/enums/title_types.dart';
+import 'package:flutter_tabs_navigator2/movies/domain/enums/title_types.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'movie.freezed.dart';

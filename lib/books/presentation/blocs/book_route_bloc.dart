@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:flutter_imdb/books/domain/entities/book.dart';
-import 'package:flutter_imdb/books/domain/ports/repositories/book_repository.dart';
+import 'package:flutter_tabs_navigator2/books/domain/entities/book.dart';
+import 'package:flutter_tabs_navigator2/books/domain/ports/repositories/book_repository.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:meta/meta.dart';
 
