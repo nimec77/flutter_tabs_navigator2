@@ -4,9 +4,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_imdb/app/presentation/app_bloc_observer.dart';
-import 'package:flutter_imdb/app/presentation/blocs/app_route_bloc.dart';
-import 'package:flutter_imdb/app/presentation/router/app_route_information_parser.dart';
-import 'package:flutter_imdb/app/presentation/router/app_router_delegate.dart';
+import 'package:flutter_imdb/app/presentation/blocs/tabs_route/tabs_route_bloc.dart';
+import 'package:flutter_imdb/app/presentation/screens/app_screen.dart';
 
 void main() {
   Bloc.observer = AppBlocObserver();
@@ -19,42 +18,21 @@ void main() {
   );
 }
 
-class ImdbApp extends StatefulWidget {
+class ImdbApp extends StatelessWidget {
   const ImdbApp({Key? key}) : super(key: key);
 
   @override
-  State<ImdbApp> createState() => _ImdbAppState();
-}
-
-class _ImdbAppState extends State<ImdbApp> {
-  late final AppRouteBloc _appRouteBloc;
-  late final AppRouterDelegate _appRouterDelegate;
-  late final AppRouteInformationParser _appRouteInformationParser;
-
-  @override
-  void initState() {
-    _appRouteBloc = AppRouteBloc();
-    _appRouterDelegate = AppRouterDelegate(_appRouteBloc);
-    _appRouteInformationParser = AppRouteInformationParser(_appRouteBloc);
-    _appRouteBloc.add(const AppRouteEvent.toMoviesList());
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _appRouteBloc.close();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return MaterialApp(
       title: 'Imdb',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routerDelegate: _appRouterDelegate,
-      routeInformationParser: _appRouteInformationParser,
+      home: BlocProvider<TabsRouteBloc>(
+        create: (context) => TabsRouteBloc(),
+        child: const AppScreen(),
+      ),
     );
   }
+
 }
