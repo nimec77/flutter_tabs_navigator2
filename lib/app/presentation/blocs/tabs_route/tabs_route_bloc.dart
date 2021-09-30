@@ -21,7 +21,6 @@ class TabsRouteBloc extends Bloc<TabsRouteEvent, TabsRouteState> {
       toMoviesList: _mapToMoviesListToState,
       toMoviesGrid: _mapToMoviesGridToState,
       toMoviesSearch: _mapToMoviesSearchToState,
-      toUnknown: _mapToUnknownToState,
     );
   }
 
@@ -37,7 +36,4 @@ class TabsRouteBloc extends Bloc<TabsRouteEvent, TabsRouteState> {
     yield const TabsRouteState.moviesSearch();
   }
 
-  Stream<TabsRouteState> _mapToUnknownToState(TabsRouteEventToUnknown event) async* {
-    yield const TabsRouteState.unknown();
-  }
 }

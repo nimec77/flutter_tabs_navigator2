@@ -7,6 +7,4 @@ class TabsRouteEvent with _$TabsRouteEvent {
   const factory TabsRouteEvent.toMoviesGrid() = TabsRouteEventToMoviesGrid;
 
   const factory TabsRouteEvent.toMoviesSearch() = TabsRouteEventToMoviesSearch;
-
-  const factory TabsRouteEvent.toUnknown() = TabsRouteEventToUnknown;
 }

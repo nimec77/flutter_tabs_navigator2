@@ -28,10 +28,6 @@ class _$TabsRouteEventTearOff {
   TabsRouteEventToMoviesSearch toMoviesSearch() {
     return const TabsRouteEventToMoviesSearch();
   }
-
-  TabsRouteEventToUnknown toUnknown() {
-    return const TabsRouteEventToUnknown();
-  }
 }
 
 /// @nodoc
@@ -44,7 +40,6 @@ mixin _$TabsRouteEvent {
     required TResult Function() toMoviesList,
     required TResult Function() toMoviesGrid,
     required TResult Function() toMoviesSearch,
-    required TResult Function() toUnknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -52,7 +47,6 @@ mixin _$TabsRouteEvent {
     TResult Function()? toMoviesList,
     TResult Function()? toMoviesGrid,
     TResult Function()? toMoviesSearch,
-    TResult Function()? toUnknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,7 +54,6 @@ mixin _$TabsRouteEvent {
     TResult Function()? toMoviesList,
     TResult Function()? toMoviesGrid,
     TResult Function()? toMoviesSearch,
-    TResult Function()? toUnknown,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -70,7 +63,6 @@ mixin _$TabsRouteEvent {
     required TResult Function(TabsRouteEventToMoviesGrid value) toMoviesGrid,
     required TResult Function(TabsRouteEventToMoviesSearch value)
         toMoviesSearch,
-    required TResult Function(TabsRouteEventToUnknown value) toUnknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -78,7 +70,6 @@ mixin _$TabsRouteEvent {
     TResult Function(TabsRouteEventToMoviesList value)? toMoviesList,
     TResult Function(TabsRouteEventToMoviesGrid value)? toMoviesGrid,
     TResult Function(TabsRouteEventToMoviesSearch value)? toMoviesSearch,
-    TResult Function(TabsRouteEventToUnknown value)? toUnknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -86,7 +77,6 @@ mixin _$TabsRouteEvent {
     TResult Function(TabsRouteEventToMoviesList value)? toMoviesList,
     TResult Function(TabsRouteEventToMoviesGrid value)? toMoviesGrid,
     TResult Function(TabsRouteEventToMoviesSearch value)? toMoviesSearch,
-    TResult Function(TabsRouteEventToUnknown value)? toUnknown,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -153,7 +143,6 @@ class _$TabsRouteEventToMoviesList implements TabsRouteEventToMoviesList {
     required TResult Function() toMoviesList,
     required TResult Function() toMoviesGrid,
     required TResult Function() toMoviesSearch,
-    required TResult Function() toUnknown,
   }) {
     return toMoviesList();
   }
@@ -164,7 +153,6 @@ class _$TabsRouteEventToMoviesList implements TabsRouteEventToMoviesList {
     TResult Function()? toMoviesList,
     TResult Function()? toMoviesGrid,
     TResult Function()? toMoviesSearch,
-    TResult Function()? toUnknown,
   }) {
     return toMoviesList?.call();
   }
@@ -175,7 +163,6 @@ class _$TabsRouteEventToMoviesList implements TabsRouteEventToMoviesList {
     TResult Function()? toMoviesList,
     TResult Function()? toMoviesGrid,
     TResult Function()? toMoviesSearch,
-    TResult Function()? toUnknown,
     required TResult orElse(),
   }) {
     if (toMoviesList != null) {
@@ -191,7 +178,6 @@ class _$TabsRouteEventToMoviesList implements TabsRouteEventToMoviesList {
     required TResult Function(TabsRouteEventToMoviesGrid value) toMoviesGrid,
     required TResult Function(TabsRouteEventToMoviesSearch value)
         toMoviesSearch,
-    required TResult Function(TabsRouteEventToUnknown value) toUnknown,
   }) {
     return toMoviesList(this);
   }
@@ -202,7 +188,6 @@ class _$TabsRouteEventToMoviesList implements TabsRouteEventToMoviesList {
     TResult Function(TabsRouteEventToMoviesList value)? toMoviesList,
     TResult Function(TabsRouteEventToMoviesGrid value)? toMoviesGrid,
     TResult Function(TabsRouteEventToMoviesSearch value)? toMoviesSearch,
-    TResult Function(TabsRouteEventToUnknown value)? toUnknown,
   }) {
     return toMoviesList?.call(this);
   }
@@ -213,7 +198,6 @@ class _$TabsRouteEventToMoviesList implements TabsRouteEventToMoviesList {
     TResult Function(TabsRouteEventToMoviesList value)? toMoviesList,
     TResult Function(TabsRouteEventToMoviesGrid value)? toMoviesGrid,
     TResult Function(TabsRouteEventToMoviesSearch value)? toMoviesSearch,
-    TResult Function(TabsRouteEventToUnknown value)? toUnknown,
     required TResult orElse(),
   }) {
     if (toMoviesList != null) {
@@ -271,7 +255,6 @@ class _$TabsRouteEventToMoviesGrid implements TabsRouteEventToMoviesGrid {
     required TResult Function() toMoviesList,
     required TResult Function() toMoviesGrid,
     required TResult Function() toMoviesSearch,
-    required TResult Function() toUnknown,
   }) {
     return toMoviesGrid();
   }
@@ -282,7 +265,6 @@ class _$TabsRouteEventToMoviesGrid implements TabsRouteEventToMoviesGrid {
     TResult Function()? toMoviesList,
     TResult Function()? toMoviesGrid,
     TResult Function()? toMoviesSearch,
-    TResult Function()? toUnknown,
   }) {
     return toMoviesGrid?.call();
   }
@@ -293,7 +275,6 @@ class _$TabsRouteEventToMoviesGrid implements TabsRouteEventToMoviesGrid {
     TResult Function()? toMoviesList,
     TResult Function()? toMoviesGrid,
     TResult Function()? toMoviesSearch,
-    TResult Function()? toUnknown,
     required TResult orElse(),
   }) {
     if (toMoviesGrid != null) {
@@ -309,7 +290,6 @@ class _$TabsRouteEventToMoviesGrid implements TabsRouteEventToMoviesGrid {
     required TResult Function(TabsRouteEventToMoviesGrid value) toMoviesGrid,
     required TResult Function(TabsRouteEventToMoviesSearch value)
         toMoviesSearch,
-    required TResult Function(TabsRouteEventToUnknown value) toUnknown,
   }) {
     return toMoviesGrid(this);
   }
@@ -320,7 +300,6 @@ class _$TabsRouteEventToMoviesGrid implements TabsRouteEventToMoviesGrid {
     TResult Function(TabsRouteEventToMoviesList value)? toMoviesList,
     TResult Function(TabsRouteEventToMoviesGrid value)? toMoviesGrid,
     TResult Function(TabsRouteEventToMoviesSearch value)? toMoviesSearch,
-    TResult Function(TabsRouteEventToUnknown value)? toUnknown,
   }) {
     return toMoviesGrid?.call(this);
   }
@@ -331,7 +310,6 @@ class _$TabsRouteEventToMoviesGrid implements TabsRouteEventToMoviesGrid {
     TResult Function(TabsRouteEventToMoviesList value)? toMoviesList,
     TResult Function(TabsRouteEventToMoviesGrid value)? toMoviesGrid,
     TResult Function(TabsRouteEventToMoviesSearch value)? toMoviesSearch,
-    TResult Function(TabsRouteEventToUnknown value)? toUnknown,
     required TResult orElse(),
   }) {
     if (toMoviesGrid != null) {
@@ -391,7 +369,6 @@ class _$TabsRouteEventToMoviesSearch implements TabsRouteEventToMoviesSearch {
     required TResult Function() toMoviesList,
     required TResult Function() toMoviesGrid,
     required TResult Function() toMoviesSearch,
-    required TResult Function() toUnknown,
   }) {
     return toMoviesSearch();
   }
@@ -402,7 +379,6 @@ class _$TabsRouteEventToMoviesSearch implements TabsRouteEventToMoviesSearch {
     TResult Function()? toMoviesList,
     TResult Function()? toMoviesGrid,
     TResult Function()? toMoviesSearch,
-    TResult Function()? toUnknown,
   }) {
     return toMoviesSearch?.call();
   }
@@ -413,7 +389,6 @@ class _$TabsRouteEventToMoviesSearch implements TabsRouteEventToMoviesSearch {
     TResult Function()? toMoviesList,
     TResult Function()? toMoviesGrid,
     TResult Function()? toMoviesSearch,
-    TResult Function()? toUnknown,
     required TResult orElse(),
   }) {
     if (toMoviesSearch != null) {
@@ -429,7 +404,6 @@ class _$TabsRouteEventToMoviesSearch implements TabsRouteEventToMoviesSearch {
     required TResult Function(TabsRouteEventToMoviesGrid value) toMoviesGrid,
     required TResult Function(TabsRouteEventToMoviesSearch value)
         toMoviesSearch,
-    required TResult Function(TabsRouteEventToUnknown value) toUnknown,
   }) {
     return toMoviesSearch(this);
   }
@@ -440,7 +414,6 @@ class _$TabsRouteEventToMoviesSearch implements TabsRouteEventToMoviesSearch {
     TResult Function(TabsRouteEventToMoviesList value)? toMoviesList,
     TResult Function(TabsRouteEventToMoviesGrid value)? toMoviesGrid,
     TResult Function(TabsRouteEventToMoviesSearch value)? toMoviesSearch,
-    TResult Function(TabsRouteEventToUnknown value)? toUnknown,
   }) {
     return toMoviesSearch?.call(this);
   }
@@ -451,7 +424,6 @@ class _$TabsRouteEventToMoviesSearch implements TabsRouteEventToMoviesSearch {
     TResult Function(TabsRouteEventToMoviesList value)? toMoviesList,
     TResult Function(TabsRouteEventToMoviesGrid value)? toMoviesGrid,
     TResult Function(TabsRouteEventToMoviesSearch value)? toMoviesSearch,
-    TResult Function(TabsRouteEventToUnknown value)? toUnknown,
     required TResult orElse(),
   }) {
     if (toMoviesSearch != null) {
@@ -463,123 +435,6 @@ class _$TabsRouteEventToMoviesSearch implements TabsRouteEventToMoviesSearch {
 
 abstract class TabsRouteEventToMoviesSearch implements TabsRouteEvent {
   const factory TabsRouteEventToMoviesSearch() = _$TabsRouteEventToMoviesSearch;
-}
-
-/// @nodoc
-abstract class $TabsRouteEventToUnknownCopyWith<$Res> {
-  factory $TabsRouteEventToUnknownCopyWith(TabsRouteEventToUnknown value,
-          $Res Function(TabsRouteEventToUnknown) then) =
-      _$TabsRouteEventToUnknownCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class _$TabsRouteEventToUnknownCopyWithImpl<$Res>
-    extends _$TabsRouteEventCopyWithImpl<$Res>
-    implements $TabsRouteEventToUnknownCopyWith<$Res> {
-  _$TabsRouteEventToUnknownCopyWithImpl(TabsRouteEventToUnknown _value,
-      $Res Function(TabsRouteEventToUnknown) _then)
-      : super(_value, (v) => _then(v as TabsRouteEventToUnknown));
-
-  @override
-  TabsRouteEventToUnknown get _value => super._value as TabsRouteEventToUnknown;
-}
-
-/// @nodoc
-
-class _$TabsRouteEventToUnknown implements TabsRouteEventToUnknown {
-  const _$TabsRouteEventToUnknown();
-
-  @override
-  String toString() {
-    return 'TabsRouteEvent.toUnknown()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is TabsRouteEventToUnknown);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() toMoviesList,
-    required TResult Function() toMoviesGrid,
-    required TResult Function() toMoviesSearch,
-    required TResult Function() toUnknown,
-  }) {
-    return toUnknown();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? toMoviesList,
-    TResult Function()? toMoviesGrid,
-    TResult Function()? toMoviesSearch,
-    TResult Function()? toUnknown,
-  }) {
-    return toUnknown?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? toMoviesList,
-    TResult Function()? toMoviesGrid,
-    TResult Function()? toMoviesSearch,
-    TResult Function()? toUnknown,
-    required TResult orElse(),
-  }) {
-    if (toUnknown != null) {
-      return toUnknown();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(TabsRouteEventToMoviesList value) toMoviesList,
-    required TResult Function(TabsRouteEventToMoviesGrid value) toMoviesGrid,
-    required TResult Function(TabsRouteEventToMoviesSearch value)
-        toMoviesSearch,
-    required TResult Function(TabsRouteEventToUnknown value) toUnknown,
-  }) {
-    return toUnknown(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TabsRouteEventToMoviesList value)? toMoviesList,
-    TResult Function(TabsRouteEventToMoviesGrid value)? toMoviesGrid,
-    TResult Function(TabsRouteEventToMoviesSearch value)? toMoviesSearch,
-    TResult Function(TabsRouteEventToUnknown value)? toUnknown,
-  }) {
-    return toUnknown?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(TabsRouteEventToMoviesList value)? toMoviesList,
-    TResult Function(TabsRouteEventToMoviesGrid value)? toMoviesGrid,
-    TResult Function(TabsRouteEventToMoviesSearch value)? toMoviesSearch,
-    TResult Function(TabsRouteEventToUnknown value)? toUnknown,
-    required TResult orElse(),
-  }) {
-    if (toUnknown != null) {
-      return toUnknown(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class TabsRouteEventToUnknown implements TabsRouteEvent {
-  const factory TabsRouteEventToUnknown() = _$TabsRouteEventToUnknown;
 }
 
 /// @nodoc
@@ -597,10 +452,6 @@ class _$TabsRouteStateTearOff {
   TabsRouteStateMoviesSearch moviesSearch() {
     return const TabsRouteStateMoviesSearch();
   }
-
-  TabsRouteStateUnknown unknown() {
-    return const TabsRouteStateUnknown();
-  }
 }
 
 /// @nodoc
@@ -613,7 +464,6 @@ mixin _$TabsRouteState {
     required TResult Function() moviesList,
     required TResult Function() moviesGrid,
     required TResult Function() moviesSearch,
-    required TResult Function() unknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -621,7 +471,6 @@ mixin _$TabsRouteState {
     TResult Function()? moviesList,
     TResult Function()? moviesGrid,
     TResult Function()? moviesSearch,
-    TResult Function()? unknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -629,7 +478,6 @@ mixin _$TabsRouteState {
     TResult Function()? moviesList,
     TResult Function()? moviesGrid,
     TResult Function()? moviesSearch,
-    TResult Function()? unknown,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -638,7 +486,6 @@ mixin _$TabsRouteState {
     required TResult Function(TabsRouteStateMoviesList value) moviesList,
     required TResult Function(TabsRouteStateMoviesGrid value) moviesGrid,
     required TResult Function(TabsRouteStateMoviesSearch value) moviesSearch,
-    required TResult Function(TabsRouteStateUnknown value) unknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -646,7 +493,6 @@ mixin _$TabsRouteState {
     TResult Function(TabsRouteStateMoviesList value)? moviesList,
     TResult Function(TabsRouteStateMoviesGrid value)? moviesGrid,
     TResult Function(TabsRouteStateMoviesSearch value)? moviesSearch,
-    TResult Function(TabsRouteStateUnknown value)? unknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -654,7 +500,6 @@ mixin _$TabsRouteState {
     TResult Function(TabsRouteStateMoviesList value)? moviesList,
     TResult Function(TabsRouteStateMoviesGrid value)? moviesGrid,
     TResult Function(TabsRouteStateMoviesSearch value)? moviesSearch,
-    TResult Function(TabsRouteStateUnknown value)? unknown,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -721,7 +566,6 @@ class _$TabsRouteStateMoviesList implements TabsRouteStateMoviesList {
     required TResult Function() moviesList,
     required TResult Function() moviesGrid,
     required TResult Function() moviesSearch,
-    required TResult Function() unknown,
   }) {
     return moviesList();
   }
@@ -732,7 +576,6 @@ class _$TabsRouteStateMoviesList implements TabsRouteStateMoviesList {
     TResult Function()? moviesList,
     TResult Function()? moviesGrid,
     TResult Function()? moviesSearch,
-    TResult Function()? unknown,
   }) {
     return moviesList?.call();
   }
@@ -743,7 +586,6 @@ class _$TabsRouteStateMoviesList implements TabsRouteStateMoviesList {
     TResult Function()? moviesList,
     TResult Function()? moviesGrid,
     TResult Function()? moviesSearch,
-    TResult Function()? unknown,
     required TResult orElse(),
   }) {
     if (moviesList != null) {
@@ -758,7 +600,6 @@ class _$TabsRouteStateMoviesList implements TabsRouteStateMoviesList {
     required TResult Function(TabsRouteStateMoviesList value) moviesList,
     required TResult Function(TabsRouteStateMoviesGrid value) moviesGrid,
     required TResult Function(TabsRouteStateMoviesSearch value) moviesSearch,
-    required TResult Function(TabsRouteStateUnknown value) unknown,
   }) {
     return moviesList(this);
   }
@@ -769,7 +610,6 @@ class _$TabsRouteStateMoviesList implements TabsRouteStateMoviesList {
     TResult Function(TabsRouteStateMoviesList value)? moviesList,
     TResult Function(TabsRouteStateMoviesGrid value)? moviesGrid,
     TResult Function(TabsRouteStateMoviesSearch value)? moviesSearch,
-    TResult Function(TabsRouteStateUnknown value)? unknown,
   }) {
     return moviesList?.call(this);
   }
@@ -780,7 +620,6 @@ class _$TabsRouteStateMoviesList implements TabsRouteStateMoviesList {
     TResult Function(TabsRouteStateMoviesList value)? moviesList,
     TResult Function(TabsRouteStateMoviesGrid value)? moviesGrid,
     TResult Function(TabsRouteStateMoviesSearch value)? moviesSearch,
-    TResult Function(TabsRouteStateUnknown value)? unknown,
     required TResult orElse(),
   }) {
     if (moviesList != null) {
@@ -838,7 +677,6 @@ class _$TabsRouteStateMoviesGrid implements TabsRouteStateMoviesGrid {
     required TResult Function() moviesList,
     required TResult Function() moviesGrid,
     required TResult Function() moviesSearch,
-    required TResult Function() unknown,
   }) {
     return moviesGrid();
   }
@@ -849,7 +687,6 @@ class _$TabsRouteStateMoviesGrid implements TabsRouteStateMoviesGrid {
     TResult Function()? moviesList,
     TResult Function()? moviesGrid,
     TResult Function()? moviesSearch,
-    TResult Function()? unknown,
   }) {
     return moviesGrid?.call();
   }
@@ -860,7 +697,6 @@ class _$TabsRouteStateMoviesGrid implements TabsRouteStateMoviesGrid {
     TResult Function()? moviesList,
     TResult Function()? moviesGrid,
     TResult Function()? moviesSearch,
-    TResult Function()? unknown,
     required TResult orElse(),
   }) {
     if (moviesGrid != null) {
@@ -875,7 +711,6 @@ class _$TabsRouteStateMoviesGrid implements TabsRouteStateMoviesGrid {
     required TResult Function(TabsRouteStateMoviesList value) moviesList,
     required TResult Function(TabsRouteStateMoviesGrid value) moviesGrid,
     required TResult Function(TabsRouteStateMoviesSearch value) moviesSearch,
-    required TResult Function(TabsRouteStateUnknown value) unknown,
   }) {
     return moviesGrid(this);
   }
@@ -886,7 +721,6 @@ class _$TabsRouteStateMoviesGrid implements TabsRouteStateMoviesGrid {
     TResult Function(TabsRouteStateMoviesList value)? moviesList,
     TResult Function(TabsRouteStateMoviesGrid value)? moviesGrid,
     TResult Function(TabsRouteStateMoviesSearch value)? moviesSearch,
-    TResult Function(TabsRouteStateUnknown value)? unknown,
   }) {
     return moviesGrid?.call(this);
   }
@@ -897,7 +731,6 @@ class _$TabsRouteStateMoviesGrid implements TabsRouteStateMoviesGrid {
     TResult Function(TabsRouteStateMoviesList value)? moviesList,
     TResult Function(TabsRouteStateMoviesGrid value)? moviesGrid,
     TResult Function(TabsRouteStateMoviesSearch value)? moviesSearch,
-    TResult Function(TabsRouteStateUnknown value)? unknown,
     required TResult orElse(),
   }) {
     if (moviesGrid != null) {
@@ -955,7 +788,6 @@ class _$TabsRouteStateMoviesSearch implements TabsRouteStateMoviesSearch {
     required TResult Function() moviesList,
     required TResult Function() moviesGrid,
     required TResult Function() moviesSearch,
-    required TResult Function() unknown,
   }) {
     return moviesSearch();
   }
@@ -966,7 +798,6 @@ class _$TabsRouteStateMoviesSearch implements TabsRouteStateMoviesSearch {
     TResult Function()? moviesList,
     TResult Function()? moviesGrid,
     TResult Function()? moviesSearch,
-    TResult Function()? unknown,
   }) {
     return moviesSearch?.call();
   }
@@ -977,7 +808,6 @@ class _$TabsRouteStateMoviesSearch implements TabsRouteStateMoviesSearch {
     TResult Function()? moviesList,
     TResult Function()? moviesGrid,
     TResult Function()? moviesSearch,
-    TResult Function()? unknown,
     required TResult orElse(),
   }) {
     if (moviesSearch != null) {
@@ -992,7 +822,6 @@ class _$TabsRouteStateMoviesSearch implements TabsRouteStateMoviesSearch {
     required TResult Function(TabsRouteStateMoviesList value) moviesList,
     required TResult Function(TabsRouteStateMoviesGrid value) moviesGrid,
     required TResult Function(TabsRouteStateMoviesSearch value) moviesSearch,
-    required TResult Function(TabsRouteStateUnknown value) unknown,
   }) {
     return moviesSearch(this);
   }
@@ -1003,7 +832,6 @@ class _$TabsRouteStateMoviesSearch implements TabsRouteStateMoviesSearch {
     TResult Function(TabsRouteStateMoviesList value)? moviesList,
     TResult Function(TabsRouteStateMoviesGrid value)? moviesGrid,
     TResult Function(TabsRouteStateMoviesSearch value)? moviesSearch,
-    TResult Function(TabsRouteStateUnknown value)? unknown,
   }) {
     return moviesSearch?.call(this);
   }
@@ -1014,7 +842,6 @@ class _$TabsRouteStateMoviesSearch implements TabsRouteStateMoviesSearch {
     TResult Function(TabsRouteStateMoviesList value)? moviesList,
     TResult Function(TabsRouteStateMoviesGrid value)? moviesGrid,
     TResult Function(TabsRouteStateMoviesSearch value)? moviesSearch,
-    TResult Function(TabsRouteStateUnknown value)? unknown,
     required TResult orElse(),
   }) {
     if (moviesSearch != null) {
@@ -1026,120 +853,4 @@ class _$TabsRouteStateMoviesSearch implements TabsRouteStateMoviesSearch {
 
 abstract class TabsRouteStateMoviesSearch implements TabsRouteState {
   const factory TabsRouteStateMoviesSearch() = _$TabsRouteStateMoviesSearch;
-}
-
-/// @nodoc
-abstract class $TabsRouteStateUnknownCopyWith<$Res> {
-  factory $TabsRouteStateUnknownCopyWith(TabsRouteStateUnknown value,
-          $Res Function(TabsRouteStateUnknown) then) =
-      _$TabsRouteStateUnknownCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class _$TabsRouteStateUnknownCopyWithImpl<$Res>
-    extends _$TabsRouteStateCopyWithImpl<$Res>
-    implements $TabsRouteStateUnknownCopyWith<$Res> {
-  _$TabsRouteStateUnknownCopyWithImpl(
-      TabsRouteStateUnknown _value, $Res Function(TabsRouteStateUnknown) _then)
-      : super(_value, (v) => _then(v as TabsRouteStateUnknown));
-
-  @override
-  TabsRouteStateUnknown get _value => super._value as TabsRouteStateUnknown;
-}
-
-/// @nodoc
-
-class _$TabsRouteStateUnknown implements TabsRouteStateUnknown {
-  const _$TabsRouteStateUnknown();
-
-  @override
-  String toString() {
-    return 'TabsRouteState.unknown()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is TabsRouteStateUnknown);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() moviesList,
-    required TResult Function() moviesGrid,
-    required TResult Function() moviesSearch,
-    required TResult Function() unknown,
-  }) {
-    return unknown();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? moviesList,
-    TResult Function()? moviesGrid,
-    TResult Function()? moviesSearch,
-    TResult Function()? unknown,
-  }) {
-    return unknown?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? moviesList,
-    TResult Function()? moviesGrid,
-    TResult Function()? moviesSearch,
-    TResult Function()? unknown,
-    required TResult orElse(),
-  }) {
-    if (unknown != null) {
-      return unknown();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(TabsRouteStateMoviesList value) moviesList,
-    required TResult Function(TabsRouteStateMoviesGrid value) moviesGrid,
-    required TResult Function(TabsRouteStateMoviesSearch value) moviesSearch,
-    required TResult Function(TabsRouteStateUnknown value) unknown,
-  }) {
-    return unknown(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TabsRouteStateMoviesList value)? moviesList,
-    TResult Function(TabsRouteStateMoviesGrid value)? moviesGrid,
-    TResult Function(TabsRouteStateMoviesSearch value)? moviesSearch,
-    TResult Function(TabsRouteStateUnknown value)? unknown,
-  }) {
-    return unknown?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(TabsRouteStateMoviesList value)? moviesList,
-    TResult Function(TabsRouteStateMoviesGrid value)? moviesGrid,
-    TResult Function(TabsRouteStateMoviesSearch value)? moviesSearch,
-    TResult Function(TabsRouteStateUnknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (unknown != null) {
-      return unknown(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class TabsRouteStateUnknown implements TabsRouteState {
-  const factory TabsRouteStateUnknown() = _$TabsRouteStateUnknown;
 }

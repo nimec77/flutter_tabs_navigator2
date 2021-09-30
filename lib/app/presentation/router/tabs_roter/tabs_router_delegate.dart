@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_imdb/app/presentation/blocs/tabs_route/tabs_route_bloc.dart';
-import 'package:flutter_imdb/app/presentation/screens/unknown_screen.dart';
 import 'package:flutter_imdb/app/presentation/widgets/app_bottom_bar.dart';
 import 'package:flutter_imdb/movies/presentation/screens/movies_grid_screen.dart';
 import 'package:flutter_imdb/movies/presentation/screens/movies_list_screen.dart';
@@ -13,19 +12,19 @@ import 'package:flutter_imdb/movies/presentation/screens/movies_search_screen.da
 class TabsRouterDelegate extends RouterDelegate<TabsRouteState>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<TabsRouteState> {
   TabsRouterDelegate(this.tabsRouteBloc) : navigatorKey = GlobalKey<NavigatorState>() {
-    _appRouteBlocSubscription = tabsRouteBloc.stream.listen((state) {
+    _tabsRouteBlocSubscription = tabsRouteBloc.stream.listen((state) {
       _state = state;
       notifyListeners();
     });
   }
 
   final TabsRouteBloc tabsRouteBloc;
-  late final StreamSubscription _appRouteBlocSubscription;
+  late final StreamSubscription _tabsRouteBlocSubscription;
   var _state = const TabsRouteState.moviesList();
 
   @override
   void dispose() {
-    _appRouteBlocSubscription.cancel();
+    _tabsRouteBlocSubscription.cancel();
     super.dispose();
   }
 
@@ -49,7 +48,6 @@ class TabsRouterDelegate extends RouterDelegate<TabsRouteState>
               moviesList: _moviesListPages,
               moviesGrid: _moviesGridPages,
               moviesSearch: _moviesSearchPages,
-              unknown: _unknownPages,
             ),
             onPopPage: (route, dynamic result) {
               if (!route.didPop(result)) {
@@ -87,15 +85,6 @@ class TabsRouterDelegate extends RouterDelegate<TabsRouteState>
       const MaterialPage<void>(
         key: ValueKey('MoviesSearchScreen'),
         child: MoviesSearchScreen(),
-      ),
-    ];
-  }
-
-  List<Page<void>> _unknownPages(TabsRouteState state) {
-    return [
-      const MaterialPage<void>(
-        key: ValueKey('UnknownScreen'),
-        child: UnknownScreen(),
       ),
     ];
   }
