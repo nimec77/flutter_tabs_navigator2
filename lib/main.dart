@@ -36,7 +36,6 @@ class _ImdbAppState extends State<ImdbApp> {
     _appRouteBloc = AppRouteBloc();
     _appRouterDelegate = AppRouterDelegate(_appRouteBloc);
     _appRouteInformationParser = AppRouteInformationParser(_appRouteBloc);
-    _appRouteBloc.add(const AppRouteEvent.toApp());
     super.initState();
   }
 
